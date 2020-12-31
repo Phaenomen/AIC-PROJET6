@@ -61,7 +61,8 @@ Voici un exemple du code que vous trouverez dans le script, celui-ci réalise l'
 
 
 `
-def registryKeys() :
+
+    def registryKeys() :
 
     # Raccourcis du bureau (Fichiers de l'utilisateur, Ce PC, Corbeille, OneDrive)
     
