@@ -61,19 +61,26 @@ Voici un exemple du code que vous trouverez dans le script, celui-ci réalise l'
 `# > CHANGEMENT DU FOND D'ECRAN
 
 def changeWallpapers() :
+    
     images=[]  # Déclare une liste vide
-    for image in os.listdir(
-            os.getcwd() + r'\WallPapers') :  # Boucle parcourant les fichiers du répertoire WallPapers (image est le nom d'un fichier)
-        # print(image) # On peut décommenter pour voir la liste des images disponible dans notre dossier
-        images.append(image)  # Ajoute le fichier à la liste
-    image=os.getcwd() + r'\WallPapers\\' + images[random.randint(0, len(os.listdir(
-        os.getcwd() + r'\WallPapers')) - 1)]  # os.getcwd() donne le répertoire ou est executé le script, auquel on rajoute le dossier
-    # Wallpapers, auquel s'ajoute un élément de la liste, pris aléatoirement entre 0 et le nombre d'image dans le dossier.
-    # print(image) #On peut décommenter pour voir le chemin du dossier
-    os.popen('copy ' + image + ' c:\\Windows\Web\Wallpaper\Windows\wallpaper.jpg') # Copie l'image choisie dans le dossier indiqué.
-    time.sleep(0.5) # Applique un temps de pause pour laisser le temps de la copie
-    ctypes.windll.user32.SystemParametersInfoW(20, 0, 'C:\\Windows\Web\Wallpaper\Windows\wallpaper.jpg',
-                                               3)  # Modifie un fichier système pour changer le fond d'écran
+    for image in os.listdir (os.getcwd() + r'\WallPapers') :  # Boucle parcourant les fichiers du répertoire WallPapers (image est le nom d'un fichier)
+      
+      # print(image) # On peut décommenter pour voir la liste des images disponible dans notre dossier
+       
+       images.append(image)  # Ajoute le fichier à la liste
+   
+   image=os.getcwd() + r'\WallPapers\\' + images[random.randint(0, len(os.listdir(os.getcwd() + r'\WallPapers')) - 1)]  # os.getcwd() donne le répertoire ou est executé le script, auquel on rajoute le dossier
+   
+   # Wallpapers, auquel s'ajoute un élément de la liste, pris aléatoirement entre 0 et le nombre d'image dans le dossier.
+   
+   # print(image) #On peut décommenter pour voir le chemin du dossier
+   
+   os.popen('copy ' + image + ' c:\\Windows\Web\Wallpaper\Windows\wallpaper.jpg') # Copie l'image choisie dans le dossier indiqué.
+   
+   time.sleep(0.5) # Applique un temps de pause pour laisser le temps de la copie
+   
+   ctypes.windll.user32.SystemParametersInfoW(20, 0, 'C:\\Windows\Web\Wallpaper\Windows\wallpaper.jpg',3)  # Modifie un fichier système pour changer le fond d'écran
+    
     print(" --> Un fond d'écran a été choisi et appliqué à notre ordinateur.")# Ce message va s'afficher`
 
 
@@ -85,7 +92,7 @@ Le projet est terminé, tout est fonctionnel cependant nous pourrions faire des 
 - Action complexe de supprimer les logiciels préinstallés inutiles (Les constructeurs adorent mettre pleins de logiciels inutiles et gourmands sur les ordinateurs neufs)
 - Action complexe d'installer un logiciel de sauvegarde automatique et de mettre en place une sauvegarde tous les "x" jours par exemple. L'utilisateur final n'aura qu'a brancher son disque dur ou clé USB avant le lancement de le sauvegarde. 
 
-etc... Pleins de choses peuvent être ajoutés et améliorés, notre seule limite, c'est notre imagination ! 
+etc... Pleins de choses peuvent être ajoutés et améliorés, la seule limite, c'est notre imagination ! 
 
 ## Contact
 Crée par @Phaenomen - N'hésitez pas à me contacter en cas de besoin ! 
