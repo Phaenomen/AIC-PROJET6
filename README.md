@@ -3,7 +3,7 @@
 
 ## Table des matières
 * [Information générale](#information-générale)
-* [Exemples d'utilisation](#exemples-d'utilisation)
+* [Exemples d'utilisation](#exemples-d-utilisation)
 * [Prérequis](#prérequis)
 * [Utilisation](#utilisation)
 * [Code](#code)
