@@ -60,8 +60,6 @@ Durant le script, deux questions seront posées :
 Voici un exemple du code que vous trouverez dans le script, celui-ci réalise l'action de modifier le registre pour afficher/masquer certains raccourcis sur le bureau : 
 
 
-`
-
     def registryKeys() :
 
     # Raccourcis du bureau (Fichiers de l'utilisateur, Ce PC, Corbeille, OneDrive)
