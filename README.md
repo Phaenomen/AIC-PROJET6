@@ -69,16 +69,10 @@ def changeWallpapers() :
        
        images.append(image)  # Ajoute le fichier à la liste
    
-   image=os.getcwd() + r'\WallPapers\\' + images[random.randint(0, len(os.listdir(os.getcwd() + r'\WallPapers')) - 1)]  # os.getcwd() donne le répertoire ou est executé le script, auquel on rajoute le dossier
-   
-   # Wallpapers, auquel s'ajoute un élément de la liste, pris aléatoirement entre 0 et le nombre d'image dans le dossier.
-   
-   # print(image) #On peut décommenter pour voir le chemin du dossier
+   image=os.getcwd() + r'\WallPapers\\' + images[random.randint(0, len(os.listdir(os.getcwd() + r'\WallPapers')) - 1)]  # os.getcwd() donne le répertoire ou est executé le script, auquel on rajoute le dossier # Wallpapers, auquel s'ajoute un élément de la liste, pris aléatoirement entre 0 et le nombre d'image dans le dossier.# print(image) #On peut décommenter pour voir le chemin du dossier
    
    os.popen('copy ' + image + ' c:\\Windows\Web\Wallpaper\Windows\wallpaper.jpg') # Copie l'image choisie dans le dossier indiqué.
-   
    time.sleep(0.5) # Applique un temps de pause pour laisser le temps de la copie
-   
    ctypes.windll.user32.SystemParametersInfoW(20, 0, 'C:\\Windows\Web\Wallpaper\Windows\wallpaper.jpg',3)  # Modifie un fichier système pour changer le fond d'écran
     
     print(" --> Un fond d'écran a été choisi et appliqué à notre ordinateur.")# Ce message va s'afficher`
