@@ -3,8 +3,8 @@
 
 ## Table des matières
 * [Information générale](#information-générale)
-* [Exemples d'utilisation](#exemples)
-* [Prérequis](#prerequis)
+* [Exemples d'utilisation](#exemples-d'utilisation)
+* [Prérequis](#prérequis)
 * [Utilisation](#utilisation)
 * [Code](#code)
 * [Status](#status)
