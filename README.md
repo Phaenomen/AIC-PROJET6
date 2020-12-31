@@ -3,9 +3,9 @@
 
 ## Table des matières
 * [Information générale](#information-générale)
-* [Exemples d'utilisation](#exemples-d-utilisation)
+* [Exemples utilisation](#exemples-utilisation)
 * [Prérequis](#prérequis)
-* [Utilisation](#utilisation)
+* [Comment utiliser mon script](#comment-utiliser-mon-script)
 * [Code](#code)
 * [Status](#status)
 * [Contact](#contact)
