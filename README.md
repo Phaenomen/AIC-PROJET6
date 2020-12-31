@@ -2,7 +2,7 @@
 > Dans le cadre de mon projet chez OpenClassRooms en tant que Administrateur Infrascture & Cloud, j'ai décidé de faire un script qui automatise la préparation d'un ordinateur neuf ou fraîchement formaté. (Windows uniquement)
 
 ## Table des matières
-* [Information générale](#info-general)
+* [Information générale](#information-générale)
 * [Exemples d'utilisation](#exemples)
 * [Prérequis](#prerequis)
 * [Utilisation](#utilisation)
