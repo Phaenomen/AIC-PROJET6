@@ -58,24 +58,23 @@ Durant le script, deux questions seront posées :
 
 Voici un exemple du code que vous trouverez dans le script, celui-ci réalise l'action "Changement du fond d'écran" 
 
-`# > CHANGEMENT DU FOND D'ECRAN
+`def registryKeys() :
+    # Raccourcis du bureau (Fichiers de l'utilisateur, Ce PC, Corbeille, OneDrive)
 
-def changeWallpapers() :
-    
-    images=[]  # Déclare une liste vide
-    for image in os.listdir (os.getcwd() + r'\WallPapers') :  # Boucle parcourant les fichiers du répertoire WallPapers (image est le nom d'un fichier)
-      
-      # print(image) # On peut décommenter pour voir la liste des images disponible dans notre dossier
-       
-       images.append(image)  # Ajoute le fichier à la liste
-   
-   image=os.getcwd() + r'\WallPapers\\' + images[random.randint(0, len(os.listdir(os.getcwd() + r'\WallPapers')) - 1)]  # os.getcwd() donne le répertoire ou est executé le script, auquel on rajoute le dossier # Wallpapers, auquel s'ajoute un élément de la liste, pris aléatoirement entre 0 et le nombre d'image dans le dossier.# print(image) #On peut décommenter pour voir le chemin du dossier
-   
-   os.popen('copy ' + image + ' c:\\Windows\Web\Wallpaper\Windows\wallpaper.jpg') # Copie l'image choisie dans le dossier indiqué.
-   time.sleep(0.5) # Applique un temps de pause pour laisser le temps de la copie
-   ctypes.windll.user32.SystemParametersInfoW(20, 0, 'C:\\Windows\Web\Wallpaper\Windows\wallpaper.jpg',3)  # Modifie un fichier système pour changer le fond d'écran
-    
-    print(" --> Un fond d'écran a été choisi et appliqué à notre ordinateur.")# Ce message va s'afficher`
+    registry=winreg.ConnectRegistry(None, winreg.HKEY_CURRENT_USER)  # Ouvre la ruche de registre "Current User"
+    key=winreg.OpenKey(registry, r'Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel',
+                       reserved = 0,
+                       access = winreg.KEY_ALL_ACCESS)  # Ouvre la clé "NewStartPanel" avec droit de modification de valeurs
+    winreg.SetValueEx(key, '{20D04FE0-3AEA-1069-A2D8-08002B30309D}', 0, winreg.REG_DWORD,
+                      0)  # Modifie la valeur '{20D04FE0-..." et lui met "0". Si non présente, la crée et "0" affiche l'icone "Fichiers de l'utilisateur"
+    winreg.SetValueEx(key, '{59031a47-3f72-44a7-89c5-5595fe6b30ee}', 0, winreg.REG_DWORD,
+                      0)  # Pareil - 0 affiche l'icône "Ce PC"
+    winreg.SetValueEx(key, '{018D5C66-4533-4307-9B53-224DE2ED1FE6}', 0, winreg.REG_DWORD,
+                      1)  # Pareil - 1 "cache" l'icône OneDrive (si existant)
+    winreg.SetValueEx(key, '{645FF040-5081-101B-9F08-00AA002F954E}', 0, winreg.REG_DWORD,
+                      0)  # Pareil - 0 affiche la corbeille (si pas affiché par défaut)
+    key.Close()  # Ferme l'accès a la clé
+    print(" --> Les raccourcis ont été paramamétrés.") # Affiche ce message`
 
 
 ## Status
