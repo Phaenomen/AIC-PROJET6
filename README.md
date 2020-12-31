@@ -28,9 +28,11 @@ Après 8 ans en tant que technicien informatique, j'ai remarqué que beaucoup de
 
 ## Exemples utilisation
 
-Imaginez que vous êtes un technicien informatique et que vous devez installer une dizaine d'ordinateurs neufs (ou des ordinateurs que vous venez de formater par exemple) dans une société, vous pouvez utilisez ce script ! 
-Imaginez que vous êtes un revendeur informatique et que vous voulez configurer les ordinateurs neufs pour tous les clients qui achètent un ordinateur chez vous et bien, vous pourrez utiliser ce script ! 
-Ou alors imaginez tout simplement que vous êtes un utilisateur classique, vous venez d'acheter un ordinateur ou vous venez de le remettre à zéro. Utilisez ce script, vous gagnerez beaucoup de temps et vous aurez un ordinateur bien configuré et à jour ! 
+*Imaginez que vous êtes un technicien informatique et que vous devez installer une dizaine d'ordinateurs neufs (ou des ordinateurs que vous venez de formater par exemple) dans une société, vous pouvez utilisez ce script ! 
+
+*Imaginez que vous êtes un revendeur informatique et que vous voulez configurer les ordinateurs neufs pour tous les clients qui achètent un ordinateur chez vous et bien, vous pourrez utiliser ce script ! 
+
+*Ou alors imaginez tout simplement que vous êtes un utilisateur classique, vous venez d'acheter un ordinateur ou vous venez de le remettre à zéro. Utilisez ce script, vous gagnerez beaucoup de temps et vous aurez un ordinateur bien configuré et à jour ! 
 
 ## Prérequis
 
