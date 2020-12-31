@@ -62,7 +62,7 @@ Voici un exemple du code que vous trouverez dans le script, celui-ci réalise l'
 
 ` #PARAMETRAGE DU REGISTRE  
 
-def registryKeys(): # Raccourcis du bureau (Fichiers de l'utilisateur, Ce PC, Corbeille, OneDrive)
+'def registryKeys(): # Raccourcis du bureau (Fichiers de l'utilisateur, Ce PC, Corbeille, OneDrive)'
 
     registry=winreg.ConnectRegistry(None, winreg.HKEY_CURRENT_USER)  # Ouvre la ruche de registre "Current User"
     key=winreg.OpenKey(registry, r'Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel',
