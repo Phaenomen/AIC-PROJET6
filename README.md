@@ -60,7 +60,7 @@ Durant le script, deux questions seront posées :
 Voici un exemple du code que vous trouverez dans le script, celui-ci réalise l'action de modifier le registre pour afficher/masquer certains raccourcis sur le bureau : 
 
 
-`   registryKeys() :
+`  
     # Raccourcis du bureau (Fichiers de l'utilisateur, Ce PC, Corbeille, OneDrive)
 
     registry=winreg.ConnectRegistry(None, winreg.HKEY_CURRENT_USER)  # Ouvre la ruche de registre "Current User"
