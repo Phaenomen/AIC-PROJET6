@@ -27,6 +27,7 @@ Après 8 ans en tant que technicien informatique, j'ai remarqué que beaucoup de
 - Planifie un rédémarrage dans 15 minutes.
 
 ## Exemples utilisation
+
 Imaginez que vous êtes un technicien informatique et que vous devez installer une dizaine d'ordinateurs neufs (ou des ordinateurs que vous venez de formater par exemple) dans une société, vous pouvez utilisez ce script ! 
 Imaginez que vous êtes un revendeur informatique et que vous voulez configurer les ordinateurs neufs pour tous les clients qui achètent un ordinateur chez vous et bien, vous pourrez utiliser ce script ! 
 Ou alors imaginez tout simplement que vous êtes un utilisateur classique, vous venez d'acheter un ordinateur ou vous venez de le remettre à zéro. Utilisez ce script, vous gagnerez beaucoup de temps et vous aurez un ordinateur bien configuré et à jour ! 
@@ -56,9 +57,10 @@ Durant le script, deux questions seront posées :
 
 ## Code 
 
-Voici un exemple du code que vous trouverez dans le script, celui-ci réalise l'action "Changement du fond d'écran" 
+Voici un exemple du code que vous trouverez dans le script, celui-ci réalise l'action de modifier le registre pour afficher/masquer certains raccourcis sur le bureau : 
 
-`def registryKeys(): # Raccourcis du bureau (Fichiers de l'utilisateur, Ce PC, Corbeille, OneDrive)
+
+`   def registryKeys(): # Raccourcis du bureau (Fichiers de l'utilisateur, Ce PC, Corbeille, OneDrive)
 
     registry=winreg.ConnectRegistry(None, winreg.HKEY_CURRENT_USER)  # Ouvre la ruche de registre "Current User"
     key=winreg.OpenKey(registry, r'Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel',
