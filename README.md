@@ -12,7 +12,7 @@
 
 ## Information générale
 
-## Exemples d'utilisation
+## Exemples utilisation
 
 ## Prérequis
 
