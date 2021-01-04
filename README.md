@@ -66,20 +66,24 @@ Voici un exemple du code que vous trouverez dans le script, celui-ci réalise l'
 
     # Raccourcis du bureau (Fichiers de l'utilisateur, Ce PC, Corbeille, OneDrive)
     
-    registry=winreg.ConnectRegistry(None, winreg.HKEY_CURRENT_USER)  # Ouvre la ruche de registre "Current User"
-    key=winreg.OpenKey(registry, r'Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel',
-                       reserved = 0,
-                       access = winreg.KEY_ALL_ACCESS)  # Ouvre la clé "NewStartPanel" avec droit de modification de valeurs
-    winreg.SetValueEx(key, '{20D04FE0-3AEA-1069-A2D8-08002B30309D}', 0, winreg.REG_DWORD,
-                      0)  # Modifie la valeur '{20D04FE0-..." et lui met "0". Si non présente, la crée et "0" affiche l'icone "Fichiers de l'utilisateur"
-    winreg.SetValueEx(key, '{59031a47-3f72-44a7-89c5-5595fe6b30ee}', 0, winreg.REG_DWORD,
-                      0)  # Pareil - 0 affiche l'icône "Ce PC"
-    winreg.SetValueEx(key, '{018D5C66-4533-4307-9B53-224DE2ED1FE6}', 0, winreg.REG_DWORD,
-                      1)  # Pareil - 1 "cache" l'icône OneDrive (si existant)
-    winreg.SetValueEx(key, '{645FF040-5081-101B-9F08-00AA002F954E}', 0, winreg.REG_DWORD,
-                      0)  # Pareil - 0 affiche la corbeille (si pas affiché par défaut)
-    key.Close()  # Ferme l'accès a la clé
-    print(" --> Les raccourcis ont été paramamétrés.") # Affiche ce message`
+     try: # Permet de tester le code
+        registry=winreg.ConnectRegistry(None, winreg.HKEY_CURRENT_USER)  # Ouvre la ruche de registre "Current User"
+        key=winreg.OpenKey(registry, r'Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel',
+                           reserved = 0,
+                           access = winreg.KEY_ALL_ACCESS)  # Ouvre la clé "NewStartPanel" avec droit de modification de valeurs
+        winreg.SetValueEx(key, '{20D04FE0-3AEA-1069-A2D8-08002B30309D}', 0, winreg.REG_DWORD,
+                          0)  # Modifie la valeur '{20D04FE0-..." et lui met "0". Si non présente, la crée et "0" affiche l'icone "Fichiers de l'utilisateur"
+        winreg.SetValueEx(key, '{59031a47-3f72-44a7-89c5-5595fe6b30ee}', 0, winreg.REG_DWORD,
+                          0)  # Pareil - 0 affiche l'icône "Ce PC"
+        winreg.SetValueEx(key, '{018D5C66-4533-4307-9B53-224DE2ED1FE6}', 0, winreg.REG_DWORD,
+                          1)  # Pareil - 1 "cache" l'icône OneDrive (si existant)
+        winreg.SetValueEx(key, '{645FF040-5081-101B-9F08-00AA002F954E}', 0, winreg.REG_DWORD,
+                          0)  # Pareil - 0 affiche la corbeille (si pas affiché par défaut)
+        key.Close()  # Ferme l'accès a la clé
+    except: # Si le code ne s'execute pas bien
+        print (" --> Les raccourcis n'ont pas pu être paramétrés.") # Affiche ce message
+    else: # Si le code s'execute bien
+        print(" --> Les raccourcis ont été paramamétrés.") # Affiche ce message`
 
 
 ## Status
