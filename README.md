@@ -14,7 +14,7 @@
 
 Après 8 ans en tant que technicien informatique, j'ai remarqué que beaucoup de tâches étaient répétitives et que l'automatisation nous ferait gagner énormément de temps. J'ai crée un script Python, qui "prépare" un ordinateur vierge. Voici la liste des actions : 
 
-- Ajout raccourcis bureau "Ce PC" / "Fichiers de l'utilisateurs" / "Corbeille" et supression du raccourci "OneDrive" si existant.
+- Ajout raccourcis bureau "Ce PC" / "Fichiers de l'utilisateurs" / "Corbeille" et suppression du raccourci "OneDrive" si existant.
 - "Corbeille" rajouté dans le menu "Periphériques et lecteurs".
 - Message d'accueil personnalisé au démarrage. 
 - Possibilité de désactiver Cortana (le script pose la question).
